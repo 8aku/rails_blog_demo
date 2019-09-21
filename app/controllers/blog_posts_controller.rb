@@ -1,4 +1,5 @@
 class BlogPostsController < ApplicationController
+  http_basic_authenticate_with name: "dhh", password: "secret", except: :index
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
   # GET /blog_posts
